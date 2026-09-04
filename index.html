@@ -88,7 +88,7 @@
 
   /* Portfolio / gallery */
   .work{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:16px;}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:250px;gap:16px;}
   .tile{position:relative;overflow:hidden;border-radius:3px;background:var(--paper);}
   .tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
   .tile:hover img{transform:scale(1.05);}
@@ -154,8 +154,8 @@
     .studio .wrap{grid-template-columns:1fr;gap:36px;}
     .studio-frame{aspect-ratio:16/11;max-height:420px;}
     .contact .wrap{grid-template-columns:1fr;}
-    .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px;}
-    .tile.wide{grid-column:span 1;}
+    .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:210px;}
+    .tile.wide{grid-column:span 2;}
     .nav-links{display:none;}
     .menu-btn{display:flex;}
     .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);padding:22px 44px;gap:18px;}
@@ -273,11 +273,10 @@
         <p>A look at the masonry, concrete, and interior work we take on across Brooklyn and New York.</p>
       </div>
       <div class="gallery">
-        <div class="tile tall"><img src="assets/masonry-brooklyn.jpg" alt="Brooklyn street with Manhattan Bridge" loading="lazy"><div class="lbl">DUMBO, Brooklyn</div></div>
         <div class="tile wide"><img src="assets/interior-2.jpg" alt="Finished modern interior" loading="lazy"><div class="lbl">Interior renovation</div></div>
+        <div class="tile"><img src="assets/outdoor-concrete-2.jpg" alt="Modern concrete architecture" loading="lazy"><div class="lbl">Concrete architecture</div></div>
         <div class="tile"><img src="assets/masonry.jpg" alt="Brick masonry detail" loading="lazy"><div class="lbl">Masonry detail</div></div>
         <div class="tile"><img src="assets/exterior.jpg" alt="Exterior structural framing" loading="lazy"><div class="lbl">Structural build</div></div>
-        <div class="tile wide"><img src="assets/outdoor-concrete-2.jpg" alt="Modern concrete architecture" loading="lazy"><div class="lbl">Concrete architecture</div></div>
         <div class="tile"><img src="assets/interior-1.jpg" alt="Interior renovation in progress" loading="lazy"><div class="lbl">On site, in progress</div></div>
       </div>
     </div>
