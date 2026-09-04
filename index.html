@@ -158,11 +158,9 @@
 
   /* Footer */
   footer{background:var(--paper2);border-top:1px solid var(--line);padding:40px 0;}
-  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;}
-  footer .fb{font-family:'Fraunces',serif;font-weight:600;font-size:18px;}
-  footer .fl{display:flex;gap:26px;font-size:13.5px;color:var(--ink-dim);}
-  footer .fl a:hover{color:var(--ink);}
-  footer .cr{width:100%;border-top:1px solid var(--line);padding-top:20px;margin-top:8px;font-size:13px;color:var(--stone);}
+  footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;}
+  footer .fb{font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:var(--ink);}
+  footer .cr{font-size:13px;color:var(--stone);}
 
   /* Responsive */
   @media (max-width:940px){
@@ -349,12 +347,10 @@
         <h2 class="contact-title">Get in <em>touch.</em></h2>
         <p>Tell us about your space and we'll get back to you with next steps. New builds, renovations, or a quick question — we're glad to help.</p>
         <div class="info-row"><div class="k">Phone</div><div class="v"><a href="tel:17328238883">732-823-8883</a></div></div>
-        <div class="info-row"><div class="k">Email</div><div class="v"><a href="mailto:alsabootbuilders@gmail.com">alsabootbuilders@gmail.com</a></div></div>
         <div class="info-row"><div class="k">Location</div><div class="v">Brooklyn, New York</div></div>
         <div class="info-row"><div class="k">Hours</div><div class="v">Monday–Friday · 9:00 AM – 5:00 PM</div></div>
         <div class="socials">
           <a href="tel:17328238883" aria-label="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 2a11 11 0 0 0 5.5 5.5l2-2.5 5 2v4a2 2 0 0 1-2 2C11 22 2 13 2 6a2 2 0 0 1 2-2z"/></svg></a>
-          <a href="mailto:alsabootbuilders@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
           <a href="https://www.instagram.com/alsab00t" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
         </div>
       </div>
@@ -380,7 +376,7 @@
         <input id="femail" name="Email" type="email" required placeholder="you@example.com">
         <label for="fmsg">Project details</label>
         <textarea id="fmsg" name="Project Details" required placeholder="Tell us about your space, the work you need, and your timeline…"></textarea>
-        <button type="submit">Send inquiry</button>
+        <button type="submit">Request Estimate</button>
         <p class="form-status" id="formStatus"></p>
       </form>
     </div>
@@ -391,13 +387,7 @@
 <footer>
   <div class="wrap">
     <div class="fb">Al Saboot Builders</div>
-    <nav class="fl">
-      <a href="#services">Services</a>
-      <a href="#work">Portfolio</a>
-      <a href="#studio">Studio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="cr">© <span id="year"></span> Al Saboot Builders · Concrete Masonry &amp; Interior Design · Brooklyn, NY · 732-823-8883</div>
+    <div class="cr">© <span id="year"></span> Al Saboot Builders · Brooklyn, NY</div>
   </div>
 </footer>
 
