@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al Saboot Builders — Concrete Masonry & Interior Design, Brooklyn NY</title>
+<meta name="description" content="Al Saboot Builders — expert concrete masonry, outdoor concrete features, and modern interior design in Brooklyn, New York. Building New York's future with art and strength.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5f2ec; --paper2:#ece7de; --card:#fbf9f4;
+    --ink:#26241f; --ink-dim:#6f6a60; --stone:#a7a093;
+    --line:#ddd7cb; --line-strong:#c7c0b2; --accent:#6a5f4e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;animation:none!important;}}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-.01em;line-height:1.08;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px;}
+  .eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--stone);}
+  ::selection{background:var(--ink);color:var(--paper);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(245,242,236,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:22px 44px;max-width:1200px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand .mono{width:38px;height:38px;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:600;font-size:17px;color:var(--ink);border-radius:3px;}
+  .brand .bn{font-family:'Fraunces',serif;font-weight:600;font-size:20px;letter-spacing:.005em;}
+  .nav-links{display:flex;gap:36px;font-size:14px;color:var(--ink-dim);}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-right{display:flex;align-items:center;gap:26px;}
+  .nav-cta{font-size:13px;letter-spacing:.05em;text-transform:uppercase;border-bottom:1.5px solid var(--ink);padding-bottom:3px;}
+  .menu-btn{display:none;background:none;border:1px solid var(--line-strong);border-radius:3px;width:40px;height:40px;color:var(--ink);cursor:pointer;align-items:center;justify-content:center;}
+
+  /* Hero */
+  .hero{padding:60px 0 78px;}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;}
+  .hero .eyebrow{margin-bottom:26px;}
+  .hero h1{font-size:clamp(44px,6vw,76px);letter-spacing:-.02em;}
+  .hero h1 em{font-style:italic;color:var(--accent);}
+  .hero .lede{margin-top:28px;font-size:17.5px;line-height:1.7;color:var(--ink-dim);max-width:46ch;}
+  .hero .actions{margin-top:36px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
+  .btn-p{background:var(--ink);color:var(--paper);font-size:14px;letter-spacing:.03em;padding:15px 30px;border-radius:2px;transition:background .2s;}
+  .btn-p:hover{background:#3a372f;}
+  .btn-t{font-size:14px;letter-spacing:.03em;border-bottom:1.5px solid var(--line-strong);padding-bottom:4px;transition:border-color .2s;}
+  .btn-t:hover{border-color:var(--ink);}
+  .hero-frame{position:relative;border-radius:3px;overflow:hidden;aspect-ratio:4/5;background:var(--paper2);}
+  .hero-frame img{width:100%;height:100%;object-fit:cover;}
+  .hero-frame .cap{position:absolute;left:0;bottom:0;right:0;padding:22px 24px;background:linear-gradient(transparent,rgba(20,18,14,.6));color:var(--paper);font-family:'Fraunces',serif;font-style:italic;font-size:15px;}
+
+  /* Intro / credibility strip */
+  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper2);}
+  .strip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:26px 44px;}
+  .strip p{font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--ink);}
+  .strip .marks{display:flex;gap:34px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim);}
+  .strip .marks span{display:flex;align-items:center;gap:9px;}
+  .strip .marks span::before{content:"";width:6px;height:6px;background:var(--accent);border-radius:50%;}
+
+  /* Section shell */
+  section{padding:96px 0;}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:50px;}
+  .sec-head h2{font-size:clamp(30px,3.6vw,44px);max-width:16ch;}
+  .sec-head p{color:var(--ink-dim);font-size:16px;max-width:40ch;}
+
+  /* Services */
+  .services{border-top:1px solid var(--line);}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease;}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 22px 44px rgba(38,36,31,.10);}
+  .svc-img{aspect-ratio:3/2;overflow:hidden;background:var(--paper2);}
+  .svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .svc:hover .svc-img img{transform:scale(1.04);}
+  .svc-body{padding:26px 26px 30px;}
+  .svc .n{font-size:12px;letter-spacing:.2em;color:var(--stone);}
+  .svc h3{font-size:23px;margin:12px 0 10px;}
+  .svc p{font-size:14.5px;color:var(--ink-dim);line-height:1.6;}
+
+  /* Portfolio / gallery */
+  .work{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:16px;}
+  .tile{position:relative;overflow:hidden;border-radius:3px;background:var(--paper);}
+  .tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+  .tile:hover img{transform:scale(1.05);}
+  .tile .lbl{position:absolute;left:0;right:0;bottom:0;padding:20px 18px 16px;background:linear-gradient(transparent,rgba(20,18,14,.66));color:var(--paper);font-family:'Fraunces',serif;font-style:italic;font-size:15px;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s;}
+  .tile:hover .lbl{opacity:1;transform:none;}
+  .tile.tall{grid-row:span 2;}
+  .tile.wide{grid-column:span 2;}
+
+  /* Studio / about */
+  .studio .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center;}
+  .studio-frame{position:relative;border-radius:3px;overflow:hidden;aspect-ratio:4/5;}
+  .studio-frame img{width:100%;height:100%;object-fit:cover;}
+  .studio-copy h2{font-size:clamp(28px,3.4vw,40px);margin-bottom:22px;}
+  .studio-copy h2 em{font-style:italic;color:var(--accent);}
+  .studio-copy p{color:var(--ink-dim);font-size:16px;margin-bottom:18px;max-width:52ch;}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:34px;}
+  .stat{background:var(--paper);padding:24px 20px;text-align:center;}
+  .stat b{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:30px;color:var(--ink);}
+  .stat span{font-size:12px;letter-spacing:.08em;color:var(--ink-dim);text-transform:uppercase;}
+
+  /* Contact */
+  .contact{border-top:1px solid var(--line);}
+  .contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start;}
+  .contact h2{font-size:clamp(30px,3.6vw,44px);margin-bottom:18px;}
+  .contact h2 em{font-style:italic;color:var(--accent);}
+  .contact-info>p{color:var(--ink-dim);font-size:16px;margin-bottom:30px;max-width:38ch;}
+  .info-row{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--line);}
+  .info-row:last-of-type{border-bottom:1px solid var(--line);}
+  .info-row .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);width:96px;flex-shrink:0;padding-top:2px;}
+  .info-row .v{font-size:15.5px;color:var(--ink);}
+  .info-row .v a:hover{color:var(--accent);}
+  .socials{display:flex;gap:12px;margin-top:26px;}
+  .socials a{width:42px;height:42px;border:1px solid var(--line-strong);border-radius:3px;display:flex;align-items:center;justify-content:center;color:var(--ink);transition:border-color .2s,background .2s;}
+  .socials a:hover{border-color:var(--accent);background:var(--card);}
+  .socials svg{width:18px;height:18px;}
+
+  form.msg{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:36px;}
+  form.msg .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  form.msg label{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:8px;margin-top:20px;}
+  form.msg .row2 label,form.msg label:first-of-type{margin-top:0;}
+  form.msg input,form.msg textarea{width:100%;background:var(--paper);border:1px solid var(--line-strong);border-radius:2px;color:var(--ink);padding:12px 14px;font-family:'Inter',sans-serif;font-size:15px;transition:border-color .15s;}
+  form.msg input:focus,form.msg textarea:focus{outline:none;border-color:var(--accent);}
+  form.msg textarea{resize:vertical;min-height:120px;}
+  form.msg button{margin-top:26px;width:100%;background:var(--ink);color:var(--paper);font-size:14px;letter-spacing:.04em;padding:15px;border:none;border-radius:2px;cursor:pointer;transition:background .2s;}
+  form.msg button:hover{background:#3a372f;}
+  .form-status{margin-top:16px;font-size:14.5px;font-family:'Fraunces',serif;font-style:italic;display:none;}
+  .form-status.show{display:block;}
+  .form-status.ok{color:var(--accent);}
+
+  /* Footer */
+  footer{background:var(--paper2);border-top:1px solid var(--line);padding:40px 0;}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;}
+  footer .fb{font-family:'Fraunces',serif;font-weight:600;font-size:18px;}
+  footer .fl{display:flex;gap:26px;font-size:13.5px;color:var(--ink-dim);}
+  footer .fl a:hover{color:var(--ink);}
+  footer .cr{width:100%;border-top:1px solid var(--line);padding-top:20px;margin-top:8px;font-size:13px;color:var(--stone);}
+
+  /* Responsive */
+  @media (max-width:940px){
+    .hero .wrap{grid-template-columns:1fr;gap:40px;}
+    .hero-frame{aspect-ratio:16/11;max-height:440px;}
+    .svc-grid{grid-template-columns:1fr 1fr;}
+    .studio .wrap{grid-template-columns:1fr;gap:36px;}
+    .studio-frame{aspect-ratio:16/11;max-height:420px;}
+    .contact .wrap{grid-template-columns:1fr;}
+    .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px;}
+    .tile.wide{grid-column:span 1;}
+    .nav-links{display:none;}
+    .menu-btn{display:flex;}
+    .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);padding:22px 44px;gap:18px;}
+  }
+  @media (max-width:600px){
+    .wrap{padding:0 22px;} nav{padding:18px 22px;}
+    section{padding:64px 0;}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:14px;}
+    .svc-grid{grid-template-columns:1fr;}
+    .strip .wrap{flex-direction:column;align-items:flex-start;}
+    .strip .marks{flex-wrap:wrap;gap:16px;}
+    .form-row,form.msg .row2{grid-template-columns:1fr;}
+    .stats{grid-template-columns:1fr;}
+    .info-row{flex-direction:column;gap:2px;} .info-row .k{width:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#top" class="brand" aria-label="Al Saboot Builders home">
+      <span class="mono">A</span>
+      <span class="bn">Al Saboot Builders</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#work">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="#contact" class="nav-cta">Start a Project</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Brooklyn, NY · Masonry &amp; Interiors</div>
+        <h1>Concrete,<br><em>considered.</em></h1>
+        <p class="lede">Expert masonry, outdoor concrete, and modern interior design for buildings that balance structure and soul. Thoughtful craft, from foundation to finish.</p>
+        <div class="actions">
+          <a href="#work" class="btn-p">View our work</a>
+          <a href="#contact" class="btn-t">Start a project</a>
+        </div>
+      </div>
+      <div class="hero-frame">
+        <img src="assets/outdoor-concrete.jpg" alt="Brooklyn brownstone stoops and stonework" loading="eager">
+        <div class="cap">Brownstone stonework — Brooklyn, NY</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="strip">
+    <div class="wrap">
+      <p>Building New York's future with art and strength.</p>
+      <div class="marks">
+        <span>Brooklyn based</span>
+        <span>Licensed &amp; insured</span>
+        <span>Masonry &amp; interiors</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>What we build</h2>
+        <p>Three disciplines, one standard of craft — from the structure up to the finish.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc">
+          <div class="svc-img"><img src="assets/masonry.jpg" alt="Brick masonry wall" loading="lazy"></div>
+          <div class="svc-body">
+            <div class="n">01</div>
+            <h3>Commercial Masonry</h3>
+            <p>Professional masonry for commercial buildings — engineered for strength and finished with style, built to code.</p>
+          </div>
+        </div>
+        <div class="svc">
+          <div class="svc-img"><img src="assets/outdoor-concrete-2.jpg" alt="Modern outdoor concrete architecture" loading="lazy"></div>
+          <div class="svc-body">
+            <div class="n">02</div>
+            <h3>Outdoor Concrete</h3>
+            <p>Design and construction of outdoor concrete features — garden paths, retaining walls, steps, and stoops that shape the landscape.</p>
+          </div>
+        </div>
+        <div class="svc">
+          <div class="svc-img"><img src="assets/interior-2.jpg" alt="Modern finished interior" loading="lazy"></div>
+          <div class="svc-body">
+            <div class="n">03</div>
+            <h3>Interior Design</h3>
+            <p>Innovative, stylish interior design that transforms a space with a considered, contemporary touch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / GALLERY -->
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Selected work</h2>
+        <p>A look at recent masonry, concrete, and interior projects across Brooklyn and New York.</p>
+      </div>
+      <div class="gallery">
+        <div class="tile tall"><img src="assets/masonry-brooklyn.jpg" alt="Brooklyn street with Manhattan Bridge" loading="lazy"><div class="lbl">DUMBO, Brooklyn</div></div>
+        <div class="tile wide"><img src="assets/interior-2.jpg" alt="Finished modern interior" loading="lazy"><div class="lbl">Interior renovation</div></div>
+        <div class="tile"><img src="assets/masonry.jpg" alt="Brick masonry detail" loading="lazy"><div class="lbl">Masonry detail</div></div>
+        <div class="tile"><img src="assets/exterior.jpg" alt="Exterior structural framing" loading="lazy"><div class="lbl">Structural build</div></div>
+        <div class="tile wide"><img src="assets/outdoor-concrete-2.jpg" alt="Modern concrete architecture" loading="lazy"><div class="lbl">Concrete architecture</div></div>
+        <div class="tile"><img src="assets/interior-1.jpg" alt="Interior renovation in progress" loading="lazy"><div class="lbl">On site, in progress</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO / ABOUT -->
+  <section class="studio" id="studio">
+    <div class="wrap">
+      <div class="studio-frame">
+        <img src="assets/masonry-brooklyn.jpg" alt="Brooklyn architecture with the Manhattan Bridge" loading="lazy">
+      </div>
+      <div class="studio-copy">
+        <div class="eyebrow" style="margin-bottom:16px;">The studio</div>
+        <h2>Craft that holds up — and <em>stands out.</em></h2>
+        <p>At Al Saboot Builders, we specialize in expert concrete masonry and modern interior design. From commercial masonry and outdoor concrete features to full interior transformations, we bring quality craftsmanship and innovative style to every project across Brooklyn and New York.</p>
+        <p>Structure and soul, foundation to finish — contact us today to bring your vision to life.</p>
+        <div class="stats">
+          <div class="stat"><b>15+</b><span>Years</span></div>
+          <div class="stat"><b>200+</b><span>Projects</span></div>
+          <div class="stat"><b>NYC</b><span>Brooklyn based</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-info">
+        <div class="eyebrow" style="margin-bottom:16px;">Get in touch</div>
+        <h2>Start a <em>project.</em></h2>
+        <p>Tell us about your space and we'll get back to you with next steps. New builds, renovations, or a quick question — we're glad to help.</p>
+        <div class="info-row"><div class="k">Phone</div><div class="v"><a href="tel:17328238883">732-823-8883</a></div></div>
+        <div class="info-row"><div class="k">Email</div><div class="v"><a href="mailto:alsabootbuilders@gmail.com">alsabootbuilders@gmail.com</a></div></div>
+        <div class="info-row"><div class="k">Location</div><div class="v">Brooklyn, New York</div></div>
+        <div class="info-row"><div class="k">Hours</div><div class="v">Monday–Friday · 9:00 AM – 5:00 PM</div></div>
+        <div class="socials">
+          <a href="tel:17328238883" aria-label="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 2a11 11 0 0 0 5.5 5.5l2-2.5 5 2v4a2 2 0 0 1-2 2C11 22 2 13 2 6a2 2 0 0 1 2-2z"/></svg></a>
+          <a href="mailto:alsabootbuilders@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Contact form -> FormSubmit (emails alsabootbuilders@gmail.com); redirects back with ?sent=1 -->
+      <form class="msg" id="contactForm" action="https://formsubmit.co/alsabootbuilders@gmail.com" method="post">
+        <input type="hidden" name="_subject" value="New project inquiry — Al Saboot Builders">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://qbitedgetechnologies-prog.github.io/Alsabootbuilders/?sent=1">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="row2">
+          <div>
+            <label for="fname">Name</label>
+            <input id="fname" name="Name" type="text" required placeholder="Your name">
+          </div>
+          <div>
+            <label for="fphone">Phone</label>
+            <input id="fphone" name="Phone" type="tel" placeholder="Your phone (optional)">
+          </div>
+        </div>
+        <label for="femail">Email</label>
+        <input id="femail" name="Email" type="email" required placeholder="you@example.com">
+        <label for="fmsg">Project details</label>
+        <textarea id="fmsg" name="Project Details" required placeholder="Tell us about your space, the work you need, and your timeline…"></textarea>
+        <button type="submit">Send inquiry</button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fb">Al Saboot Builders</div>
+    <nav class="fl">
+      <a href="#services">Services</a>
+      <a href="#work">Portfolio</a>
+      <a href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="cr">© <span id="year"></span> Al Saboot Builders · Concrete Masonry &amp; Interior Design · Brooklyn, NY · 732-823-8883</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Contact form: native POST to FormSubmit, which redirects back with ?sent=1
+  const status = document.getElementById('formStatus');
+  if (status && new URLSearchParams(location.search).has('sent')) {
+    status.textContent = 'Thank you — your inquiry is in. We\'ll be in touch shortly.';
+    status.className = 'form-status show ok';
+    history.replaceState(null, '', location.pathname);
+    const c = document.getElementById('contact');
+    if (c) c.scrollIntoView();
+  }
+</script>
+
+</body>
+</html>
