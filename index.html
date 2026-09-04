@@ -50,8 +50,9 @@
   /* Header */
   header{position:sticky;top:0;z-index:50;background:rgba(245,242,236,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
   nav{display:flex;align-items:center;justify-content:space-between;padding:14px 44px;max-width:1200px;margin:0 auto;}
-  .brand{display:flex;align-items:center;gap:12px;}
-  .brand .logo{height:62px;width:auto;display:block;}
+  .brand{display:flex;align-items:center;gap:13px;}
+  .brand .logo{height:50px;width:auto;display:block;border-radius:5px;}
+  .brand .bn{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--ink);letter-spacing:.005em;line-height:1.05;}
   .nav-links{display:flex;gap:36px;font-size:14px;color:var(--ink-dim);}
   .nav-links a:hover{color:var(--ink);}
   .nav-right{display:flex;align-items:center;gap:26px;}
@@ -174,6 +175,7 @@
     .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:210px;}
     .tile.wide{grid-column:span 2;}
     .nav-links{display:none;}
+    .nav-cta{display:none;}
     .menu-btn{display:flex;}
     .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);padding:22px 44px;gap:18px;}
   }
@@ -188,6 +190,27 @@
     .stats{grid-template-columns:1fr;}
     .info-row{flex-direction:column;gap:2px;} .info-row .k{width:auto;}
   }
+  /* Center content on mobile */
+  @media (max-width:768px){
+    .hero .eyebrow,.hero h1,.hero .lede{text-align:center;}
+    .hero .lede{margin-left:auto;margin-right:auto;}
+    .hero .actions{justify-content:center;}
+    .sec-head{flex-direction:column;align-items:center;text-align:center;}
+    .sec-head h2{max-width:none;}
+    .sec-head h2::before{margin-left:auto;margin-right:auto;}
+    .sec-head p{margin-left:auto;margin-right:auto;}
+    .svc-body{text-align:center;}
+    .strip .wrap{flex-direction:column;align-items:center;text-align:center;}
+    .strip .marks{justify-content:center;}
+    .studio-copy{align-items:center;text-align:center;}
+    .studio-copy p{margin-left:auto;margin-right:auto;}
+    .contact-info{text-align:center;}
+    .contact-info>p{margin-left:auto;margin-right:auto;}
+    .info-row{align-items:center;text-align:center;}
+    .socials{justify-content:center;}
+    footer .wrap{justify-content:center;text-align:center;}
+    footer .fl{justify-content:center;}
+  }
 </style>
 </head>
 <body>
@@ -195,7 +218,8 @@
 <header>
   <nav>
     <a href="#top" class="brand" aria-label="Al Saboot Builders home">
-      <img class="logo" src="assets/logo-full.jpg" alt="Al Saboot Builders — Masonry, Concrete, Interior & Exterior">
+      <img class="logo" src="assets/logo-emblem.jpg" alt="Al Saboot Builders logo">
+      <span class="bn">Al Saboot Builders</span>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#work">Portfolio</a>
