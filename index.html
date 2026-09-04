@@ -6,7 +6,6 @@
 <title>Al Saboot Builders — Concrete Masonry & Interior Design, Brooklyn NY</title>
 <meta name="description" content="Al Saboot Builders — expert concrete masonry, outdoor concrete features, and modern interior design in Brooklyn, New York. Building New York's future with art and strength.">
 <link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -15,28 +14,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#f5f2ec; --paper2:#ece7de; --card:#fbf9f4;
-    --ink:#26241f; --ink-dim:#6f6a60; --stone:#a7a093;
-    --line:#ddd7cb; --line-strong:#c7c0b2; --accent:#6a5f4e;
+    --paper:#f3f1ea; --paper2:#e8e4da; --card:#faf8f2;
+    --ink:#1e3a5c; --ink-dim:#58636f; --stone:#98a0a9;
+    --navy-deep:#16304c;
+    --line:rgba(30,58,92,.15); --line-strong:rgba(30,58,92,.28);
+    --accent:#a86b3a; --accent-soft:#c58c54; --brick:#ad5537;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;animation:none!important;}}
+  /* Dynamic, subtle drifting background — navy + bronze glows for depth */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-repeat:no-repeat;
+    background-image:
+      radial-gradient(38% 42% at 16% 16%, rgba(30,58,92,.09), transparent 68%),
+      radial-gradient(42% 46% at 85% 26%, rgba(168,107,58,.10), transparent 70%),
+      radial-gradient(52% 52% at 60% 94%, rgba(30,58,92,.07), transparent 72%);
+    animation:bgdrift 30s ease-in-out infinite alternate;
+  }
+  @keyframes bgdrift{
+    0%{background-position:0% 0%,0% 0%,0% 0%;background-size:100% 100%,100% 100%,100% 100%;}
+    100%{background-position:7% 6%,-7% 5%,5% -7%;background-size:122% 122%,116% 116%,128% 128%;}
+  }
+  main,footer{position:relative;z-index:1;}
   a{color:inherit;text-decoration:none;}
   img{max-width:100%;display:block;}
   h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-.01em;line-height:1.08;}
   .wrap{max-width:1200px;margin:0 auto;padding:0 44px;}
-  .eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--stone);}
+  .eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:600;}
   ::selection{background:var(--ink);color:var(--paper);}
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
 
   /* Header */
   header{position:sticky;top:0;z-index:50;background:rgba(245,242,236,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
-  nav{display:flex;align-items:center;justify-content:space-between;padding:22px 44px;max-width:1200px;margin:0 auto;}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 44px;max-width:1200px;margin:0 auto;}
   .brand{display:flex;align-items:center;gap:12px;}
-  .brand .mono{width:38px;height:38px;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:600;font-size:17px;color:var(--ink);border-radius:3px;}
-  .brand .bn{font-family:'Fraunces',serif;font-weight:600;font-size:20px;letter-spacing:.005em;}
+  .brand .logo{height:62px;width:auto;display:block;}
   .nav-links{display:flex;gap:36px;font-size:14px;color:var(--ink-dim);}
   .nav-links a:hover{color:var(--ink);}
   .nav-right{display:flex;align-items:center;gap:26px;}
@@ -52,7 +67,7 @@
   .hero .lede{margin-top:28px;font-size:17.5px;line-height:1.7;color:var(--ink-dim);max-width:46ch;}
   .hero .actions{margin-top:36px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
   .btn-p{background:var(--ink);color:var(--paper);font-size:14px;letter-spacing:.03em;padding:15px 30px;border-radius:2px;transition:background .2s;}
-  .btn-p:hover{background:#3a372f;}
+  .btn-p:hover{background:var(--navy-deep);}
   .btn-t{font-size:14px;letter-spacing:.03em;border-bottom:1.5px solid var(--line-strong);padding-bottom:4px;transition:border-color .2s;}
   .btn-t:hover{border-color:var(--ink);}
   .hero-frame{position:relative;border-radius:3px;overflow:hidden;aspect-ratio:4/5;background:var(--paper2);}
@@ -71,18 +86,19 @@
   section{padding:96px 0;}
   .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:50px;}
   .sec-head h2{font-size:clamp(30px,3.6vw,44px);max-width:16ch;}
+  .sec-head h2::before{content:"";display:block;width:44px;height:2px;background:var(--accent);margin-bottom:20px;}
   .sec-head p{color:var(--ink-dim);font-size:16px;max-width:40ch;}
 
   /* Services */
   .services{border-top:1px solid var(--line);}
   .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-  .svc{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease;}
-  .svc:hover{transform:translateY(-4px);box-shadow:0 22px 44px rgba(38,36,31,.10);}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:0 8px 22px rgba(22,48,76,.05);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
+  .svc:hover{transform:translateY(-4px);border-color:var(--accent-soft);box-shadow:0 26px 50px rgba(22,48,76,.15);}
   .svc-img{aspect-ratio:3/2;overflow:hidden;background:var(--paper2);}
   .svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
   .svc:hover .svc-img img{transform:scale(1.04);}
   .svc-body{padding:26px 26px 30px;}
-  .svc .n{font-size:12px;letter-spacing:.2em;color:var(--stone);}
+  .svc .n{font-size:12px;letter-spacing:.2em;color:var(--accent);font-weight:600;}
   .svc h3{font-size:23px;margin:12px 0 10px;}
   .svc p{font-size:14.5px;color:var(--ink-dim);line-height:1.6;}
 
@@ -106,7 +122,7 @@
   .studio-copy p{color:var(--ink-dim);font-size:16px;margin-bottom:18px;max-width:52ch;}
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:34px;}
   .stat{background:var(--paper);padding:24px 20px;text-align:center;}
-  .stat b{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:30px;color:var(--ink);}
+  .stat b{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:30px;color:var(--accent);}
   .stat span{font-size:12px;letter-spacing:.08em;color:var(--ink-dim);text-transform:uppercase;}
 
   /* Contact */
@@ -134,7 +150,7 @@
   form.msg input:focus,form.msg textarea:focus{outline:none;border-color:var(--accent);}
   form.msg textarea{resize:vertical;min-height:120px;}
   form.msg button{margin-top:26px;width:100%;background:var(--ink);color:var(--paper);font-size:14px;letter-spacing:.04em;padding:15px;border:none;border-radius:2px;cursor:pointer;transition:background .2s;}
-  form.msg button:hover{background:#3a372f;}
+  form.msg button:hover{background:var(--navy-deep);}
   .form-status{margin-top:16px;font-size:14.5px;font-family:'Fraunces',serif;font-style:italic;display:none;}
   .form-status.show{display:block;}
   .form-status.ok{color:var(--accent);}
@@ -179,8 +195,7 @@
 <header>
   <nav>
     <a href="#top" class="brand" aria-label="Al Saboot Builders home">
-      <span class="mono">A</span>
-      <span class="bn">Al Saboot Builders</span>
+      <img class="logo" src="assets/logo-full.jpg" alt="Al Saboot Builders — Masonry, Concrete, Interior & Exterior">
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#work">Portfolio</a>
