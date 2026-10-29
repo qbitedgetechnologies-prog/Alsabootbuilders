@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Al Saboot Builders — Concrete Masonry & Interior Design, Brooklyn NY</title>
-<meta name="description" content="Al Saboot Builders — expert concrete masonry, outdoor concrete features, and modern interior design in Brooklyn, New York. Building New York's future with art and strength.">
+<meta name="description" content="Al Saboot Builders — expert concrete masonry, outdoor concrete features, modern interior design, and property maintenance in Brooklyn, New York. Building New York's future with art and strength.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -92,7 +92,7 @@
 
   /* Services */
   .services{border-top:1px solid var(--line);}
-  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:920px;margin:0 auto;}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
   .svc{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:0 8px 22px rgba(22,48,76,.05);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
   .svc:hover{transform:translateY(-4px);border-color:var(--accent-soft);box-shadow:0 26px 50px rgba(22,48,76,.15);}
   .svc-img{aspect-ratio:3/2;overflow:hidden;background:var(--paper2);}
@@ -167,6 +167,7 @@
     .hero .wrap{grid-template-columns:1fr;gap:40px;}
     .hero-frame{aspect-ratio:16/11;max-height:440px;}
     .svc-grid{grid-template-columns:1fr 1fr;}
+    .svc-grid .svc:nth-child(3){grid-column:1/-1;justify-self:center;width:calc(50% - 14px);}
     .studio .wrap{grid-template-columns:1fr;gap:36px;}
     .studio-frame{aspect-ratio:16/11;max-height:420px;}
     .contact .wrap{grid-template-columns:1fr;}
@@ -182,6 +183,7 @@
     section{padding:64px 0;}
     .sec-head{flex-direction:column;align-items:flex-start;gap:14px;}
     .svc-grid{grid-template-columns:1fr;}
+    .svc-grid .svc:nth-child(3){width:auto;}
     .strip .wrap{flex-direction:column;align-items:flex-start;}
     .strip .marks{flex-wrap:wrap;gap:16px;}
     .form-row,form.msg .row2{grid-template-columns:1fr;}
@@ -242,7 +244,7 @@
       <div>
         <div class="eyebrow">Brooklyn, NY · Interior &amp; Exterior</div>
         <h1>Concrete,<br><em>considered.</em></h1>
-        <p class="lede">Expert masonry, outdoor concrete, and modern interior design for buildings that balance structure and soul. Thoughtful craft, from foundation to finish.</p>
+        <p class="lede">Expert masonry, outdoor concrete, modern interior design, and property maintenance for buildings that balance structure and soul. Thoughtful craft, from foundation to finish.</p>
         <div class="actions">
           <a href="#work" class="btn-p">View our work</a>
           <a href="#contact" class="btn-t">Start a project</a>
@@ -272,7 +274,7 @@
     <div class="wrap">
       <div class="sec-head">
         <h2>What we build</h2>
-        <p>Two disciplines, one standard of craft — structure and finish, inside and out.</p>
+        <p>Three services, one standard of craft — structure, finish, and upkeep, inside and out.</p>
       </div>
       <div class="svc-grid">
         <div class="svc">
@@ -289,6 +291,14 @@
             <div class="n">02</div>
             <h3>Interior &amp; Exterior</h3>
             <p>Modern interior design and full renovations, plus the exterior finishes that shape a space inside and out — considered craft from foundation to final touch.</p>
+          </div>
+        </div>
+        <div class="svc">
+          <div class="svc-img"><img src="assets/interior-1.jpg" alt="Repair and upkeep work inside a home" loading="lazy"></div>
+          <div class="svc-body">
+            <div class="n">03</div>
+            <h3>Property Maintenance</h3>
+            <p>Ongoing upkeep and repairs that keep a property in good shape — masonry and concrete touch-ups, exterior care, and interior fixes, handled with the same craft we bring to every build.</p>
           </div>
         </div>
       </div>
